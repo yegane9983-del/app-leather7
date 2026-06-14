@@ -1,0 +1,516 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/mainScreenRoot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:clipToPadding="false"
+    android:fillViewport="true"
+    android:layoutDirection="rtl"
+    android:overScrollMode="never"
+    android:textDirection="rtl">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="28dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_header_gradient"
+            android:orientation="vertical"
+            android:paddingStart="18dp"
+            android:paddingTop="20dp"
+            android:paddingEnd="18dp"
+            android:paddingBottom="23dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_header_chip"
+                    android:text="Leather Control  •  Pro"
+                    android:textColor="@color/text_on_primary"
+                    android:textSize="11sp"
+                    android:fontFamily="sans-serif-medium" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_weight="1" />
+
+                <Button
+                    android:id="@+id/recordsButton"
+                    style="@style/ButtonGhost"
+                    android:layout_width="128dp"
+                    android:text="گزارش‌ها  ←" />
+            </LinearLayout>
+
+            <TextView
+                style="@style/TextDisplay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="23dp"
+                android:text="داشبورد مصرف چرم" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                android:lineSpacingExtra="3dp"
+                android:text="محاسبه، کنترل کیفیت برش و تحلیل ماهانه در یک جریان کاری دقیق."
+                android:textColor="@color/white_72"
+                android:textSize="13sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="80dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_metric_tile_dark"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical"
+                    android:paddingStart="14dp"
+                    android:paddingEnd="14dp">
+
+                    <TextView
+                        android:id="@+id/dashboardRecordCountTextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="۰"
+                        android:textColor="@color/text_on_primary"
+                        android:textSize="27sp"
+                        android:fontFamily="sans-serif-medium" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="محاسبات ثبت‌شده"
+                        android:textColor="@color/white_72"
+                        android:textSize="11sp" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="10dp"
+                    android:layout_height="1dp" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="80dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_metric_tile_dark"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical"
+                    android:paddingStart="14dp"
+                    android:paddingEnd="14dp">
+
+                    <TextView
+                        android:id="@+id/dashboardProductCountTextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="۰"
+                        android:textColor="@color/text_on_primary"
+                        android:textSize="27sp"
+                        android:fontFamily="sans-serif-medium" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="محصولات فعال"
+                        android:textColor="@color/white_72"
+                        android:textSize="11sp" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="14dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="14dp"
+            android:background="@drawable/bg_card"
+            android:elevation="2dp"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_step_chip"
+                    android:text="محاسبه"
+                    android:textColor="@color/accent_dark"
+                    android:textSize="11sp"
+                    android:fontFamily="sans-serif-medium" />
+
+                <TextView
+                    style="@style/TextSectionTitle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="9dp"
+                    android:layout_weight="1"
+                    android:text="ثبت عملکرد تولید" />
+            </LinearLayout>
+
+            <TextView
+                style="@style/TextCaption"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:text="ورودی‌های تولید را ثبت کنید تا ارزیابی برش در گزارش همان ماه ذخیره شود." />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="17dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/TextLabel"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="ماه گزارش" />
+
+                    <Spinner
+                        android:id="@+id/monthSpinner"
+                        android:layout_width="match_parent"
+                        android:layout_height="52dp"
+                        android:layout_marginTop="6dp"
+                        android:background="@drawable/bg_input"
+                        android:popupBackground="@drawable/bg_dropdown" />
+                </LinearLayout>
+
+                <View android:layout_width="9dp" android:layout_height="1dp" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.32"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/TextLabel"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="محصول" />
+
+                    <AutoCompleteTextView
+                        android:id="@+id/productSearchEditText"
+                        style="@style/InputField"
+                        android:layout_marginTop="6dp"
+                        android:completionThreshold="1"
+                        android:dropDownVerticalOffset="6dp"
+                        android:hint="جستجوی محصول"
+                        android:inputType="text"
+                        android:popupBackground="@drawable/bg_dropdown" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/TextLabel"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="تعداد تولید" />
+
+                    <EditText
+                        android:id="@+id/quantityEditText"
+                        style="@style/InputField"
+                        android:layout_marginTop="6dp"
+                        android:hint="مثال: ۴۰"
+                        android:inputType="numberDecimal" />
+                </LinearLayout>
+
+                <View android:layout_width="9dp" android:layout_height="1dp" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/TextLabel"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="مصرف واقعی / پا" />
+
+                    <EditText
+                        android:id="@+id/actualLeatherEditText"
+                        style="@style/InputField"
+                        android:layout_marginTop="6dp"
+                        android:hint="مثال: ۱۵۸"
+                        android:inputType="numberDecimal" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/calculateButton"
+                style="@style/ButtonPrimary"
+                android:layout_width="match_parent"
+                android:layout_marginTop="17dp"
+                android:text="محاسبه و ثبت گزارش" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/resultCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="14dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="14dp"
+            android:background="@drawable/bg_result_card_neutral"
+            android:elevation="2dp"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/resultStatusTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="وضعیت"
+                    android:textSize="11sp"
+                    android:fontFamily="sans-serif-medium" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_weight="1"
+                    android:text="خروجی محاسبه"
+                    android:textColor="@color/text_secondary"
+                    android:textSize="12sp"
+                    android:fontFamily="sans-serif-medium" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/resultDifferenceTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="9dp"
+                android:text="۰ پا"
+                android:textColor="@color/text_primary"
+                android:textSize="30sp"
+                android:fontFamily="sans-serif-medium" />
+
+            <TextView
+                android:id="@+id/resultProductTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:textColor="@color/text_secondary"
+                android:textSize="12sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="62dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_metric_tile"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical"
+                    android:paddingStart="12dp"
+                    android:paddingEnd="12dp">
+
+                    <TextView
+                        android:id="@+id/resultActualTextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="۰ پا"
+                        android:textColor="@color/text_primary"
+                        android:textSize="16sp"
+                        android:fontFamily="sans-serif-medium" />
+                    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="مصرف واقعی" android:textColor="@color/text_secondary" android:textSize="10sp" />
+                </LinearLayout>
+
+                <View android:layout_width="9dp" android:layout_height="1dp" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="62dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_metric_tile"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical"
+                    android:paddingStart="12dp"
+                    android:paddingEnd="12dp">
+                    <TextView
+                        android:id="@+id/resultExpectedTextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="۰ پا"
+                        android:textColor="@color/text_primary"
+                        android:textSize="16sp"
+                        android:fontFamily="sans-serif-medium" />
+                    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="استاندارد" android:textColor="@color/text_secondary" android:textSize="10sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/resultTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="13dp"
+                android:background="@drawable/bg_status_note"
+                android:lineSpacingExtra="3dp"
+                android:padding="12dp"
+                android:textColor="@color/info_dark"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="14dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="14dp"
+            android:background="@drawable/bg_card_tinted"
+            android:elevation="2dp"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_step_chip"
+                    android:text="کاتالوگ"
+                    android:textColor="@color/accent_dark"
+                    android:textSize="11sp"
+                    android:fontFamily="sans-serif-medium" />
+                <TextView
+                    style="@style/TextSectionTitle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="9dp"
+                    android:layout_weight="1"
+                    android:text="مدیریت محصولات" />
+                <TextView
+                    android:id="@+id/catalogCountTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_count_badge"
+                    android:text="۰ محصول"
+                    android:textColor="@color/text_secondary"
+                    android:textSize="11sp" />
+            </LinearLayout>
+
+            <TextView
+                style="@style/TextCaption"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:text="مصرف استاندارد هر محصول را ثبت کنید؛ لمس طولانی هر ردیف برای حذف." />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:orientation="horizontal">
+                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1.25" android:orientation="vertical">
+                    <TextView style="@style/TextLabel" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="نام محصول" />
+                    <EditText android:id="@+id/productNameEditText" style="@style/InputField" android:layout_marginTop="6dp" android:hint="مثال: کیف مدل A" android:inputType="text" />
+                </LinearLayout>
+                <View android:layout_width="9dp" android:layout_height="1dp" />
+                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical">
+                    <TextView style="@style/TextLabel" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="مصرف / پا" />
+                    <EditText android:id="@+id/defaultUsageEditText" style="@style/InputField" android:layout_marginTop="6dp" android:hint="مثال: ۳.۵" android:inputType="numberDecimal" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/addProductButton"
+                style="@style/ButtonSecondary"
+                android:layout_width="match_parent"
+                android:layout_marginTop="13dp"
+                android:text="افزودن محصول به کاتالوگ" />
+
+            <TextView
+                android:id="@+id/emptyProductsTextView"
+                android:layout_width="match_parent"
+                android:layout_height="88dp"
+                android:layout_marginTop="13dp"
+                android:background="@drawable/bg_empty_state"
+                android:gravity="center"
+                android:lineSpacingExtra="3dp"
+                android:padding="14dp"
+                android:text="هنوز محصولی ثبت نشده است.\nاولین محصول را از فرم بالا اضافه کنید."
+                android:textColor="@color/text_secondary"
+                android:textSize="12sp" />
+
+            <ListView
+                android:id="@+id/productsListView"
+                android:layout_width="match_parent"
+                android:layout_height="238dp"
+                android:layout_marginTop="9dp"
+                android:clipToPadding="false"
+                android:divider="@android:color/transparent"
+                android:dividerHeight="0dp"
+                android:listSelector="@android:color/transparent"
+                android:paddingTop="2dp"
+                android:paddingBottom="4dp" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="22dp"
+            android:layout_marginTop="18dp"
+            android:layout_marginEnd="22dp"
+            android:gravity="center"
+            android:text="Leather Control  •  گزارش‌گیری دقیق تولید"
+            android:textColor="@color/text_tertiary"
+            android:textSize="11sp" />
+    </LinearLayout>
+</ScrollView>

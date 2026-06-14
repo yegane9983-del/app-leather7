@@ -1,0 +1,37 @@
+<resources>
+    <color name="primary">#4B3028</color>
+    <color name="primary_dark">#1E1310</color>
+    <color name="primary_mid">#38211B</color>
+    <color name="primary_soft">#875A46</color>
+    <color name="accent">#B76A36</color>
+    <color name="accent_dark">#8C4820</color>
+    <color name="accent_soft">#F3DDCB</color>
+    <color name="accent_surface">#FFF9F3</color>
+    <color name="background">#FAF7F4</color>
+    <color name="surface">#FFFFFF</color>
+    <color name="surface_alt">#F7F2EE</color>
+    <color name="surface_muted">#FCFAF8</color>
+    <color name="surface_dark">#2B1A16</color>
+    <color name="input_surface">#FFFEFD</color>
+    <color name="text_primary">#211715</color>
+    <color name="text_secondary">#6B5A53</color>
+    <color name="text_tertiary">#927F77</color>
+    <color name="text_on_primary">#FFFFFF</color>
+    <color name="outline">#E8DDD7</color>
+    <color name="outline_strong">#D8C2B7</color>
+    <color name="success">#EAF6EF</color>
+    <color name="success_dark">#126744</color>
+    <color name="success_outline">#B7DFCA</color>
+    <color name="danger">#FCECE9</color>
+    <color name="danger_dark">#AE352D</color>
+    <color name="danger_outline">#F0C8C3</color>
+    <color name="neutral">#F3F0ED</color>
+    <color name="neutral_dark">#63544D</color>
+    <color name="info">#F8F2EB</color>
+    <color name="info_dark">#765C4C</color>
+    <color name="white_08">#14FFFFFF</color>
+    <color name="white_12">#1FFFFFFF</color>
+    <color name="white_20">#33FFFFFF</color>
+    <color name="white_72">#B8FFFFFF</color>
+    <color name="shadow">#14000000</color>
+</resources>
